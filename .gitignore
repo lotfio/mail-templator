@@ -1,3 +1,4 @@
 *.phar
 *.cache
 vendor
+index.php
