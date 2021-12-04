@@ -81,11 +81,13 @@ final class Mail
     }
 
     /**
-     * send mail method
+     * send mail
      *
+     * @param  string $to
+     * @param  string|null $customSubject
      * @return boolean
      */
-    public function send(string $to): bool
+    public function send(string $to, string $customSubject = null): bool
     {
         // remove template word
         // all Templates ends with Template so its handy to remove it
@@ -97,6 +99,6 @@ final class Mail
         );
 
         // send email using mail adapter
-        return $this->mailer->send($to, $subject, $message);
+        return $this->mailer->send($to, $customSubject ?? $subject, $message);
     }
 }
