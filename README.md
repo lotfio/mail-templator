@@ -177,4 +177,4 @@ $mail->send('to');
 
 # :clipboard: License
 
-- ***Caprice*** is an open-source software licensed under the [MIT license](LICENSE).
+- ***Mail-Templator*** is an open-source software licensed under the [MIT license](LICENSE).
