@@ -37,5 +37,15 @@
         "style": [
             "php-cs-fixer fix ./src"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MailTemplator\\MailTemplatorServiceProvider"
+            ],
+            "aliases": {
+                "MailTemplator": "MailTemplator\\MailTemplatorFacade"
+            }
+        }
     }
 }
