@@ -159,12 +159,45 @@ $mail->send('to');
 
 ```
 
+# Laravel Integration
+- A recommended directory structure should look like this
+<img src="https://github.com/lotfio/mail-templator/blob/master/docs/directory-structure.png"  alt="directory structure">
+
+- Mail folder
+  - Templates folder
+  - Customer Mailer (PHPmailer or SwiftMailer)
+
+- Make sure to register your custom mailer to laravel AppServiceProvider
+
+```php
+public function register()
+{
+    // bind custom mailer that implements MailAdapterInterface
+    $this->app->bind(MailTemplator\Contracts\MailAdapterInterface::class, function($app){
+        return new CustomMailer;
+    });
+}
+```
+
+- Example usage withing a controller method
+
+```php
+public function resetPassword(MailTemplator\Mail $mail)
+{
+    // send mail
+    $mail->setTemplate(
+      new App\Mail\Templates\ResetPasswordTemplate
+      )->send('email@site.com');
+}
+```
+
+
 # :helicopter: TODO
 - Adding laravel support
 
 # :computer: Contributing
 
-- Thank you for considering to contribute to ***mail-templator***. All the contribution guidelines are mentioned [here](CONTRIBUTE.md).
+- Thank you for considering to contribute to ***MailTemplator***. All the contribution guidelines are mentioned [here](CONTRIBUTE.md).
 
 # :page_with_curl: ChangeLog
 
@@ -172,9 +205,9 @@ $mail->send('to');
 
 # :beer: Support the development
 
-- Share ***Caprice*** and lets get more stars and more contributors.
+- Share ***MailTemplator*** and lets get more stars and more contributors.
 - If this project helped you reduce time to develop, you can give me a cup of coffee :) : **[Paypal](https://www.paypal.me/lotfio)**. 💖
 
 # :clipboard: License
 
-- ***Caprice*** is an open-source software licensed under the [MIT license](LICENSE).
+- ***MailTemplator*** is an open-source software licensed under the [MIT license](LICENSE).
