@@ -17,6 +17,11 @@ namespace MailTemplator;
 use MailTemplator\Contracts\MailAdapterInterface;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * @psalm-suppress UndefinedClass
+ *
+ * mail templator service provider
+ */
 class MailTemplatorServiceProvider extends ServiceProvider
 {
     public function register()

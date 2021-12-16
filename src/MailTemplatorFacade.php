@@ -16,6 +16,11 @@ namespace MailTemplator;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * @psalm-suppress UndefinedClass
+ *
+ * mail templator facade
+ */
 class MailTemplatorFacade extends Facade
 {
     /**
