@@ -193,7 +193,7 @@ public function resetPassword(MailTemplator\Mail $mail)
 
 
 # :helicopter: TODO
-- Adding laravel support
+- Adding database templates support
 
 # :computer: Contributing
 
