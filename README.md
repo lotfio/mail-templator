@@ -24,12 +24,12 @@ MailTemplator is lightweight PHP package that helps you create, edit and customi
     composer require lotfio/mail-templator
 ```
 
-# 💥 testing :
+# :zap: Testing :
 ```php
     composer test-unit
     composer test-integration
 ```
-# 💥 static analysis :
+# :sunny: Static analysis :
 ```php
     composer psalm
 ```
@@ -61,7 +61,7 @@ final class MyTemplate extends Templator implements TemplateInterface
 }
 
 ```
-## Available Directives
+## :point_up: Available Directives
 - @LOGO@, @OPENLINE@, @HEADER@, @CONTENT@, @FOOTER@, @SUBFOOTER@, @POWEREDBY@
 - You can customize and update the content of these directives with setters and also with protected properties
 - Example :
@@ -89,7 +89,7 @@ final class MyTemplate extends Templator implements TemplateInterface
 }
 
 ```
-## Custom directives
+## :raised_hand: Custom directives
 
 ```php
 <?php
@@ -107,7 +107,7 @@ final class MyTemplate extends Templator implements TemplateInterface
 
 ```
 - Then you can pass the value with the template `setTemplate(new MyTemplate, ['username' => $username])`
-## Custom Static Template
+## :muscle: Custom Static Template
 - By default templator uses [Free Responsive HTML Email Template](https://github.com/leemunroe/responsive-html-email-template)
 - You can use your custom static template
 
@@ -129,7 +129,7 @@ final class MyTemplate extends Templator implements TemplateInterface
 }
 ```
 
-## Send mail with Templator
+## :email: Send mail with Templator
 - Send mail with your template
 - Email subject will follow Template class name
 ```php
@@ -159,7 +159,7 @@ $mail->send('to');
 
 ```
 
-# Laravel Integration
+# :rocket: Laravel Integration
 - A recommended directory structure should look like this
 <img src="https://github.com/lotfio/mail-templator/blob/master/docs/directory-structure.png"  alt="directory structure">
 
